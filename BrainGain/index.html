@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BrainGain</title>
+
+        <!--CSS-->
+        <link rel="stylesheet" href="styles.css">
+
+        <!--PWA-->
+        <link rel="manifest" href="manifest.json">  
+    </head>
+    <body>
+        <header class="header">
+            <img src="images/logo.png" class="logo-img" alt="BrainGain logo">
+        </header>
+
+    
+
+        <main class="container">
+
+            <section class="card">
+                <a href="memroy.html" class="card-link">
+                    <h2>Memory Game</h2>
+                </a>    
+                <p>Flip cards and find matching pairs.</p>
+                <span class="badge">Coming soon</span>
+            </section>
+
+            <section class="card">
+                <a href="simon.html" class="card-link">
+                <h2>Simon Game</h2>
+                </a>
+                <p>Repeat the sequence correctly.</p>
+                <span class="badge">Coming soon</span>
+            </section>
+
+            <section class="card">
+                <a href="sudoku.html" class="card-link">
+                <h2>Sudoku</h2>
+                </a>
+                <p>Fill the grid following Sudoku rules.</p>
+                <span class="badge">Coming soon</span>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <p>BrainGain</p>
+        </footer>
+
+        <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
+        </script>
+
+
+        <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });    
+        </script>
+
+    </body>
+</html>
